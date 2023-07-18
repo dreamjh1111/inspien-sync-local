@@ -1,0 +1,25 @@
+watch:
+  directory: /Users/jonghong/Desktop/sync
+  syncdirectory: /Users/jonghong/Desktop/syncserver
+
+
+server:
+  url: http://localhost:8081/upload
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/filelist
+    username: root
+  jpa:
+    properties:
+      hibernate:
+        #하이버네이트 SQL 콘솔출력
+        show_sql: false
+        #SQL 콘솔 가독성
+        format_sql: false
+        #디버깅 정보
+        use_sql_comments: false
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
